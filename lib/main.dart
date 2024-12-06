@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(AnimatedLogin());
+  runApp(const AnimatedLogin());
 }
 
 class AnimatedLogin extends StatelessWidget {
@@ -13,7 +13,7 @@ class AnimatedLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) => MaterialApp(
-          theme: ThemeData(fontFamily: 'Satoshi'), home: WelcomePage()),
+          theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
     );
   }
 }

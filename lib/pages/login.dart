@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
             physics: const BouncingScrollPhysics(),
             child: Container(
               height: 100.h,
-              decoration: BoxDecoration(color: Colors.white),
+              decoration: const BoxDecoration(color: Colors.white),
               padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 2.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -134,22 +134,22 @@ class _LoginPageState extends State<LoginPage> {
                           EdgeInsets.symmetric(horizontal: 5.w, vertical: .3.h),
                       decoration: BoxDecoration(
                           color:
-                              isFocusedEmail ? Colors.white : Color(0xFFF1F0F5),
+                              isFocusedEmail ? Colors.white : const Color(0xFFF1F0F5),
                           border:
-                              Border.all(width: 1, color: Color(0xFFD2D2D4)),
+                              Border.all(width: 1, color: const Color(0xFFD2D2D4)),
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             if (isFocusedEmail)
                               BoxShadow(
-                                  color: Color(0xFF835DF1).withOpacity(.3),
+                                  color: const Color(0xFF835DF1).withOpacity(.3),
                                   blurRadius: 4.0,
                                   spreadRadius: 2.0
                                   // Glow Color
                                   )
                           ]),
                       child: TextField(
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                        decoration: InputDecoration(
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        decoration: const InputDecoration(
                             border: InputBorder.none, hintText: 'Your Email'),
                         focusNode: focusNodeEmail,
                       ),
@@ -179,14 +179,14 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: BoxDecoration(
                           color: isFocusedPassword
                               ? Colors.white
-                              : Color(0xFFF1F0F5),
+                              : const Color(0xFFF1F0F5),
                           border:
-                              Border.all(width: 1, color: Color(0xFFD2D2D4)),
+                              Border.all(width: 1, color: const Color(0xFFD2D2D4)),
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             if (isFocusedPassword)
                               BoxShadow(
-                                  color: Color(0xFF835DF1).withOpacity(.3),
+                                  color: const Color(0xFF835DF1).withOpacity(.3),
                                   blurRadius: 4.0,
                                   spreadRadius: 2.0
                                   // Glow Color
@@ -218,21 +218,21 @@ class _LoginPageState extends State<LoginPage> {
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {},
-                            child: FadeInUp(
-                                delay: const Duration(milliseconds: 700),
-                                duration: const Duration(milliseconds: 800),
-                                child: Text('Sign In')),
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,
                                 textStyle: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'Satoshi'),
-                                backgroundColor: Color(0xFF835DF1),
+                                backgroundColor: const Color(0xFF835DF1),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                padding: EdgeInsets.symmetric(vertical: 16)),
+                                padding: const EdgeInsets.symmetric(vertical: 16)),
+                            child: FadeInUp(
+                                delay: const Duration(milliseconds: 700),
+                                duration: const Duration(milliseconds: 800),
+                                child: Text('Sign In')),
                           ),
                         )
                       ],

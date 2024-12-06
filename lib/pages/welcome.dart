@@ -38,7 +38,7 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             Container(
-              decoration: BoxDecoration(color: Colors.white),
+              decoration: const BoxDecoration(color: Colors.white),
               padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 2.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -88,24 +88,24 @@ class _WelcomePageState extends State<WelcomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => LoginPage(),
+                                    builder: (context) => const LoginPage(),
                                   ));
                             },
-                            child: FadeInUp(
-                                delay: const Duration(milliseconds: 1100),
-                                duration: const Duration(milliseconds: 1200),
-                                child: Text('Sign In')),
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'Satoshi'),
-                                backgroundColor: Color(0xFF835DF1),
+                                backgroundColor: const Color(0xFF835DF1),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                padding: EdgeInsets.symmetric(vertical: 16)),
+                                padding: const EdgeInsets.symmetric(vertical: 16)),
+                            child: FadeInUp(
+                                delay: const Duration(milliseconds: 1100),
+                                duration: const Duration(milliseconds: 1200),
+                                child: const Text('Sign In')),
                           ),
                         )
                       ],
